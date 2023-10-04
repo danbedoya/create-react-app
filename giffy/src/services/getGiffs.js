@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const apiKey = "a6VPpPnFR5pSkFvP2VkPd44wGctVJxbv";
 export default function getGiffs({ keyword = "morty" } = {}) {
-  const [loading, setLoading] = useState(false);
   const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=10&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
   try {
     return fetch(apiURL)
